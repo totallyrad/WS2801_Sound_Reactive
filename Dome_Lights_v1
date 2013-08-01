@@ -97,7 +97,7 @@ void loop()
   //Display the new values
   strip.show();
   
-  //sample delay
+  //sample delay sets the rate the pixels shift down the line
   delay(25);
 
 }
