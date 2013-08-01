@@ -28,13 +28,14 @@ int light_clk = 2;
 
 //Set Strip Constants
 const int length = 50;
-const int half = length/2;
+const int half = length/2;  //This automatically splits it in half. Code further down can define specific splits.
 
 //Library Setup
 Adafruit_WS2801 strip = Adafruit_WS2801(length, light_data, light_clk);
 
-//Set up arrays for cycling through all the pixels.  I'm assuming you have an even number of lights.
-uint32_t left_array[half];
+//Set up arrays for cycling through all the pixels.  I'm assuming you have an even number of lights. 
+//The number of LEDs in the left and right arrays can be specified here if you have an asymmetrical number.
+uint32_t left_array[half];  
 uint32_t right_array[half];
 
 void setup()
